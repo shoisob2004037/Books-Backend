@@ -19,7 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.send('Welcome to the API');
-    console.log('Request received');
+});
+app.get('/thik', (req, res) => {
+    res.send('Thik Ache Shob');
+});
+app.get('/thikthak', (req, res) => {
+    res.send('ThikThak Ache Shob');
 });
 
 app.use("/api/auth", authRoutes);
